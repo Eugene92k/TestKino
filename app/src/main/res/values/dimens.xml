@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_margin">4dp</dimen>
+    <dimen name="header_text_size">22sp</dimen>
+    <dimen name="image_size">150dp</dimen>
+    <dimen name="toolbar_height">60dp</dimen>
+    <dimen name="image_item_list_height">250dp</dimen>
+    <dimen name="image_item_text_size">17sp</dimen>
+    <dimen name="genre_min_width">150dp</dimen>
+</resources>
