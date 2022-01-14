@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/User/Desktop/My Application/MyApplication/app/src/main/res/drawable/button_background.xml" value="0.19282051282051282" />
         <entry key="..\:/Users/User/Desktop/My Application/MyApplication/app/src/main/res/drawable/button_genre_background.xml" value="0.19282051282051282" />
+        <entry key="..\:/Users/User/Desktop/My Application/MyApplication/app/src/main/res/layout/fragment_detail_film.xml" value="0.1537037037037037" />
+        <entry key="..\:/Users/User/Desktop/My Application/MyApplication/app/src/main/res/layout/fragment_list_films.xml" value="0.1796875" />
         <entry key="..\:/Users/User/Desktop/My Application/MyApplication/app/src/main/res/layout/list_item_genre.xml" value="0.1537037037037037" />
         <entry key="..\:/Users/User/Desktop/My Application/MyApplication/app/src/main/res/layout/list_item_header.xml" value="0.1796875" />
       </map>

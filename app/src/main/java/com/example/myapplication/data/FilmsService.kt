@@ -6,3 +6,4 @@ import retrofit2.Response
 interface FilmsService {
     suspend fun load(): Response<Films>
 }
+

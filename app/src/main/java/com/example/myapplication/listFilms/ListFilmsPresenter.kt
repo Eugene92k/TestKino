@@ -11,7 +11,7 @@ class ListFilmsPresenter(private val filmsService: FilmsService) : ListFilmsCont
 
     var view: ListFilmsContract.View? = null
     var listFilm: ArrayList<Film> = arrayListOf<Film>()
-    var response: Response<Films>? = null
+    lateinit var response: Response<Films>
     override var error: String = ""
     private val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
         error = throwable.localizedMessage ?: "Loading error"
@@ -24,13 +24,14 @@ class ListFilmsPresenter(private val filmsService: FilmsService) : ListFilmsCont
         CoroutineScope(Dispatchers.IO + exceptionHandler).launch(exceptionHandler) {
             response = filmsService.load()
             withContext(Dispatchers.Main + exceptionHandler) {
-                if (response!!.isSuccessful) {
-                    listFilm = ArrayList(response!!.body()?.films)
-                    view?.changeState(StateView.COMPLETE)
-                } else {
-                    error = response?.message().toString()
-                    view?.changeState(StateView.ERROR)
-                }
+                    if (response.isSuccessful) {
+                        listFilm = ArrayList(response?.body()?.films)
+                        view?.changeState(StateView.COMPLETE)
+                    } else {
+                        error = response?.message().toString()
+                        view?.changeState(StateView.ERROR)
+                    }
+
             }
         }
     }

@@ -37,6 +37,7 @@ class ListFilmsAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     fun attachDelegate(delegate: OnClickItem) {
         this.delegate = delegate
     }
+    
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when(viewType) {
